@@ -226,7 +226,7 @@ const Index = () => {
           <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5 col-span-2">
             <div className="flex items-center gap-2 mb-3">
               <Icon name="FileCheck" className="text-[#ea384c]" size={20} />
-              <h2 className="text-lg font-bold text-gray-800">Ожидание подписания</h2>
+              <h2 className="font-bold text-gray-800 text-lg">Ожидание подписания</h2>
             </div>
             <div className="space-y-2">
               {documents.map((doc, idx) => (
