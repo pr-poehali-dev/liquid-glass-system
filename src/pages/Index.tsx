@@ -270,30 +270,30 @@ const Index = () => {
               ))}
             </div>
           </Card>
-        </div>
 
-        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <Icon name="ClipboardList" className="text-[#ea384c]" size={20} />
-            <h2 className="text-lg font-bold text-gray-800">Поручения главы</h2>
-          </div>
-          <div className="space-y-2">
-            {tasks.map((task, idx) => (
-              <div 
-                key={idx}
-                className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3 flex items-center justify-between"
-              >
-                <div className="flex-1">
-                  <p className="font-semibold text-gray-800 text-sm">{task.task}</p>
-                  <p className="text-[10px] text-gray-600 mt-0.5 italic">✨ ИИ: {task.ai}</p>
+          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="ClipboardList" className="text-[#ea384c]" size={20} />
+              <h2 className="text-lg font-bold text-gray-800">Поручения главы</h2>
+            </div>
+            <div className="space-y-2">
+              {tasks.map((task, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3 flex items-center justify-between"
+                >
+                  <div className="flex-1">
+                    <p className="font-semibold text-gray-800 text-sm">{task.task}</p>
+                    <p className="text-[10px] text-gray-600 mt-0.5 italic">✨ ИИ: {task.ai}</p>
+                  </div>
+                  <Badge variant="outline" className="ml-4 rounded-full text-xs">
+                    📅 {task.deadline}
+                  </Badge>
                 </div>
-                <Badge variant="outline" className="ml-4 rounded-full text-xs">
-                  📅 {task.deadline}
-                </Badge>
-              </div>
-            ))}
-          </div>
-        </Card>
+              ))}
+            </div>
+          </Card>
+        </div>
 
         <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-3">
