@@ -297,7 +297,7 @@ const Index = () => {
         <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-3">
             <Icon name="Link" className="text-[#22c55e]" size={20} />
-            <h2 className="text-lg font-bold text-gray-800">Связь мероприятий Администрации с Госпрограммами</h2>
+            <h2 className="font-bold text-gray-800 text-2xl">Связь мероприятий Администрации с Госпрограммами</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
