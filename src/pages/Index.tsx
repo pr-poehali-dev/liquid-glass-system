@@ -176,7 +176,7 @@ const Index = () => {
           <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
             <div className="flex items-center gap-2 mb-3">
               <Icon name="Sparkles" className="text-[#0EA5E9]" size={20} />
-              <h2 className="text-lg font-bold text-gray-800">ИИ-рекомендации</h2>
+              <h2 className="font-bold text-gray-800 text-2xl">ИИ-рекомендации</h2>
             </div>
             <div className="space-y-2">
               {aiRecommendations.map((rec, idx) => (
@@ -207,7 +207,7 @@ const Index = () => {
           <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
             <div className="flex items-center gap-2 mb-3">
               <Icon name="TrendingUp" className="text-[#22c55e]" size={20} />
-              <h2 className="text-lg font-bold text-gray-800">Наибольшие изменения</h2>
+              <h2 className="font-bold text-gray-800 text-2xl">Наибольшие изменения</h2>
             </div>
             <div className="space-y-3">
               <div className="text-center p-4 bg-gradient-to-br from-[#22c55e]/20 to-[#22c55e]/5 rounded-xl">
