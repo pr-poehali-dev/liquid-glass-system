@@ -255,7 +255,7 @@ const Index = () => {
           <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
             <div className="flex items-center gap-2 mb-3">
               <Icon name="MessageSquare" className="text-[#0EA5E9]" size={20} />
-              <h2 className="text-lg font-bold text-gray-800">Обращения граждан</h2>
+              <h2 className="text-lg font-bold text-gray-800">Связь мер поддержки с ОКВЭД</h2>
             </div>
             <div className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4 min-h-[180px] flex flex-wrap items-center justify-center gap-3">
               {wordsCloud.map((item, idx) => (
