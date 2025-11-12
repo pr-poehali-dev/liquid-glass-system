@@ -128,7 +128,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#e3f2fd] via-[#f1f8ff] to-[#fce4ec] p-6">
-      <div className="max-w-[1800px] mx-auto space-y-6">
+      <div className="max-w-[1800px] mx-auto space-y-4">
         
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -172,32 +172,32 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6 col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Icon name="Sparkles" className="text-[#0EA5E9]" size={24} />
-              <h2 className="text-2xl font-bold text-gray-800">ИИ-рекомендации</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="Sparkles" className="text-[#0EA5E9]" size={20} />
+              <h2 className="text-lg font-bold text-gray-800">ИИ-рекомендации</h2>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {aiRecommendations.map((rec, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4 hover:shadow-md transition-all"
+                  className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3 hover:shadow-md transition-all"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex items-center gap-2 mb-1">
                         <Badge 
                           variant={rec.priority === "high" ? "destructive" : "secondary"}
-                          className="rounded-full"
+                          className="rounded-full text-xs"
                         >
-                          {rec.priority === "high" ? "Высокий приоритет" : "Средний"}
+                          {rec.priority === "high" ? "Высокий" : "Средний"}
                         </Badge>
-                        <span className="font-semibold text-gray-800">{rec.title}</span>
+                        <span className="font-semibold text-gray-800 text-sm">{rec.title}</span>
                       </div>
-                      <p className="text-sm text-gray-700">{rec.text}</p>
+                      <p className="text-xs text-gray-700">{rec.text}</p>
                     </div>
-                    <Icon name="ChevronRight" className="text-gray-400" size={20} />
+                    <Icon name="ChevronRight" className="text-gray-400" size={16} />
                   </div>
                 </div>
               ))}
@@ -205,59 +205,60 @@ const Index = () => {
           </Card>
 
           <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <Icon name="TrendingUp" className="text-[#22c55e]" size={24} />
-              <h2 className="text-2xl font-bold text-gray-800">Наибольшие изменения</h2>
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="TrendingUp" className="text-[#22c55e]" size={20} />
+              <h2 className="text-lg font-bold text-gray-800">Наибольшие изменения</h2>
             </div>
-            <div className="space-y-4">
-              <div className="text-center p-6 bg-gradient-to-br from-[#22c55e]/20 to-[#22c55e]/5 rounded-xl">
-                <p className="text-5xl font-bold text-[#22c55e]">+250</p>
-                <p className="text-sm text-gray-600 mt-2">обращений граждан</p>
-                <p className="text-xs text-gray-500">относительно октября 2025</p>
+            <div className="space-y-3">
+              <div className="text-center p-4 bg-gradient-to-br from-[#22c55e]/20 to-[#22c55e]/5 rounded-xl">
+                <p className="text-4xl font-bold text-[#22c55e]">+250</p>
+                <p className="text-xs text-gray-600 mt-1">обращений граждан</p>
+                <p className="text-[10px] text-gray-500">относительно октября</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-[#0EA5E9]/20 to-[#0EA5E9]/5 rounded-xl">
-                <p className="text-5xl font-bold text-[#0EA5E9]">+180</p>
-                <p className="text-sm text-gray-600 mt-2">исполненных поручений</p>
-                <p className="text-xs text-gray-500">+45% к прошлому месяцу</p>
+              <div className="text-center p-4 bg-gradient-to-br from-[#0EA5E9]/20 to-[#0EA5E9]/5 rounded-xl">
+                <p className="text-4xl font-bold text-[#0EA5E9]">+180</p>
+                <p className="text-xs text-gray-600 mt-1">исполненных поручений</p>
+                <p className="text-[10px] text-gray-500">+45% к прошлому месяцу</p>
               </div>
             </div>
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <Icon name="FileCheck" className="text-[#ea384c]" size={24} />
-              <h2 className="text-2xl font-bold text-gray-800">Ожидание подписания</h2>
+          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5 col-span-2">
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="FileCheck" className="text-[#ea384c]" size={20} />
+              <h2 className="text-lg font-bold text-gray-800">Ожидание подписания</h2>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {documents.map((doc, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4"
+                  className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3"
                 >
                   <div className="flex items-start gap-3">
                     <Icon 
                       name={doc.status === "ok" ? "CheckCircle2" : "AlertCircle"} 
                       className={doc.status === "ok" ? "text-[#22c55e]" : "text-[#ea384c]"} 
-                      size={20}
+                      size={18}
                     />
                     <div className="flex-1">
-                      <p className="font-semibold text-gray-800 text-sm">{doc.name}</p>
-                      <p className="text-xs text-gray-600 mt-1 italic">✨ ИИ: {doc.ai}</p>
+                      <p className="font-semibold text-gray-800 text-xs">{doc.name}</p>
+                      <p className="text-[10px] text-gray-600 mt-0.5 italic">✨ ИИ: {doc.ai}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </Card>
+        </div>
 
-          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <Icon name="MessageSquare" className="text-[#0EA5E9]" size={24} />
-              <h2 className="text-2xl font-bold text-gray-800">Обращения граждан</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="MessageSquare" className="text-[#0EA5E9]" size={20} />
+              <h2 className="text-lg font-bold text-gray-800">Обращения граждан</h2>
             </div>
-            <div className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-6 min-h-[200px] flex flex-wrap items-center justify-center gap-4">
+            <div className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4 min-h-[180px] flex flex-wrap items-center justify-center gap-3">
               {wordsCloud.map((item, idx) => (
                 <span
                   key={idx}
@@ -271,22 +272,22 @@ const Index = () => {
           </Card>
         </div>
 
-        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Icon name="ClipboardList" className="text-[#ea384c]" size={24} />
-            <h2 className="text-2xl font-bold text-gray-800">Поручения главы</h2>
+        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <Icon name="ClipboardList" className="text-[#ea384c]" size={20} />
+            <h2 className="text-lg font-bold text-gray-800">Поручения главы</h2>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {tasks.map((task, idx) => (
               <div 
                 key={idx}
-                className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4 flex items-center justify-between"
+                className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3 flex items-center justify-between"
               >
                 <div className="flex-1">
-                  <p className="font-semibold text-gray-800">{task.task}</p>
-                  <p className="text-xs text-gray-600 mt-1 italic">✨ ИИ: {task.ai}</p>
+                  <p className="font-semibold text-gray-800 text-sm">{task.task}</p>
+                  <p className="text-[10px] text-gray-600 mt-0.5 italic">✨ ИИ: {task.ai}</p>
                 </div>
-                <Badge variant="outline" className="ml-4 rounded-full">
+                <Badge variant="outline" className="ml-4 rounded-full text-xs">
                   📅 {task.deadline}
                 </Badge>
               </div>
@@ -294,19 +295,19 @@ const Index = () => {
           </div>
         </Card>
 
-        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Icon name="Link" className="text-[#22c55e]" size={24} />
-            <h2 className="text-2xl font-bold text-gray-800">Связь мероприятий Администрации с Госпрограммами</h2>
+        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <Icon name="Link" className="text-[#22c55e]" size={20} />
+            <h2 className="text-lg font-bold text-gray-800">Связь мероприятий Администрации с Госпрограммами</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-300">
-                  <th className="text-left p-3 font-semibold text-gray-700">Мероприятие</th>
-                  <th className="text-left p-3 font-semibold text-gray-700">Эффект</th>
-                  <th className="text-left p-3 font-semibold text-gray-700">Расходы</th>
-                  <th className="text-left p-3 font-semibold text-gray-700">Госпрограмма</th>
+                  <th className="text-left p-2 font-semibold text-gray-700 text-sm">Мероприятие</th>
+                  <th className="text-left p-2 font-semibold text-gray-700 text-sm">Эффект</th>
+                  <th className="text-left p-2 font-semibold text-gray-700 text-sm">Расходы</th>
+                  <th className="text-left p-2 font-semibold text-gray-700 text-sm">Госпрограмма</th>
                 </tr>
               </thead>
               <tbody>
@@ -315,10 +316,10 @@ const Index = () => {
                     key={idx}
                     className="border-b border-gray-200 hover:bg-white/40 transition-colors"
                   >
-                    <td className="p-3 text-gray-800">{prog.event}</td>
-                    <td className="p-3 text-gray-700">{prog.effect}</td>
-                    <td className="p-3 text-gray-700 font-semibold">{prog.cost}</td>
-                    <td className="p-3 text-gray-600 text-sm">{prog.program}</td>
+                    <td className="p-2 text-gray-800 text-sm">{prog.event}</td>
+                    <td className="p-2 text-gray-700 text-sm">{prog.effect}</td>
+                    <td className="p-2 text-gray-700 font-semibold text-sm">{prog.cost}</td>
+                    <td className="p-2 text-gray-600 text-xs">{prog.program}</td>
                   </tr>
                 ))}
               </tbody>
@@ -326,28 +327,28 @@ const Index = () => {
           </div>
         </Card>
 
-        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Icon name="Users" className="text-[#0EA5E9]" size={24} />
-            <h2 className="text-2xl font-bold text-gray-800">Распределение задач по агентам</h2>
+        <Card className="bg-white/40 backdrop-blur-xl border-white/60 shadow-xl rounded-2xl p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <Icon name="Users" className="text-[#0EA5E9]" size={20} />
+            <h2 className="text-lg font-bold text-gray-800">Распределение задач по агентам</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {agents.map((agent, idx) => (
               <div 
                 key={idx}
-                className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-4"
+                className="bg-white/60 backdrop-blur-sm border border-white/80 rounded-xl p-3"
               >
-                <h3 className="font-bold text-lg text-gray-800 mb-3 flex items-center gap-2">
-                  <Icon name="Building2" className="text-[#0EA5E9]" size={20} />
+                <h3 className="font-bold text-base text-gray-800 mb-2 flex items-center gap-2">
+                  <Icon name="Building2" className="text-[#0EA5E9]" size={18} />
                   {agent.name}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {agent.events.map((event, eventIdx) => (
                     <li 
                       key={eventIdx}
-                      className="text-sm text-gray-700 flex items-start gap-2"
+                      className="text-xs text-gray-700 flex items-start gap-1.5"
                     >
-                      <Icon name="ChevronRight" className="text-gray-400 mt-0.5" size={16} />
+                      <Icon name="ChevronRight" className="text-gray-400 mt-0.5" size={14} />
                       <span>{event}</span>
                     </li>
                   ))}
@@ -355,9 +356,9 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="mt-4 flex justify-center">
-            <Button className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white rounded-full shadow-lg">
-              <Icon name="Plus" size={20} className="mr-2" />
+          <div className="mt-3 flex justify-center">
+            <Button className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white rounded-full shadow-lg text-sm">
+              <Icon name="Plus" size={18} className="mr-2" />
               Оценить возможность делегирования
             </Button>
           </div>
